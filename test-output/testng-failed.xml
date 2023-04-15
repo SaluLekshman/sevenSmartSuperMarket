@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="opera"/>
+  <listeners>
+    <listener class-name="com.SevenRSuperMarket.Project.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.SevenRSuperMarket.Project.LoginTest">
+        <methods>
+          <include name="browserQuit"/>
+          <include name="initilizeBrowser"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.SevenRSuperMarket.Project.LoginTest -->
+      <class name="com.SevenRSuperMarket.Project.VerifyUsersTest">
+        <methods>
+          <include name="browserQuit"/>
+          <include name="verifyUsers"/>
+          <include name="initilizeBrowser"/>
+        </methods>
+      </class> <!-- com.SevenRSuperMarket.Project.VerifyUsersTest -->
+      <class name="com.SevenRSuperMarket.Project.ManageProductsTest">
+        <methods>
+          <include name="manageProducts"/>
+          <include name="browserQuit"/>
+          <include name="initilizeBrowser"/>
+        </methods>
+      </class> <!-- com.SevenRSuperMarket.Project.ManageProductsTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
