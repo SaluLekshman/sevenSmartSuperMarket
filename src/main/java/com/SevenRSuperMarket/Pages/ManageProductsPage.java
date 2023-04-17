@@ -19,12 +19,12 @@ public class ManageProductsPage {
 	 @FindBy(xpath="//a[@class='active nav-link']") WebElement manageaproductElement;
 	 @FindBy(xpath="//a[@class='btn btn-rounded btn-danger']") WebElement newElement;
 	 @FindBy(xpath="//input[@id='title']") WebElement EnterTitleElement;
-	 public void manageaproductElement()
+	 public void clickOnmanageaproductElement()
 	 {
 		 WaitUtility.waitForElementClickable(driver,manageaproductElement );
 		 PageUtility.clickOnElement(manageaproductElement);
 	 }
-	 public void newElement()
+	 public void clickOnnewElement()
 	 {
 		 WaitUtility.waitForElementClickable(driver, newElement);
 		 PageUtility.clickOnElement(newElement);

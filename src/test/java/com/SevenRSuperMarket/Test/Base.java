@@ -68,7 +68,7 @@ public class Base {
 	}
 	if(browser.equalsIgnoreCase("firefox")){
 
-	System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") +constants.Constants.firefoxdriverpath);
+	System.setProperty("webdriver.firefox.driver", System.getProperty("user.dir") +constants.Constants.firefoxdriverpath);
 	driver = new FirefoxDriver();
 	}
 

@@ -17,7 +17,7 @@ public class HamburgerMenuPage {
 	@Test
 	public void selectMenu(String input)
 	{   
-		By categories=By.xpath("//div[@class=\"col-lg-3 col-6\"]//child::a[@href]");
+		By categories=By.xpath("//i[@class='nav-icon fas fa-th-large']//following::a[@href]");
 		List<WebElement> selectCategoryelement=driver.findElements(categories);
 		for(WebElement category:selectCategoryelement)
 		{

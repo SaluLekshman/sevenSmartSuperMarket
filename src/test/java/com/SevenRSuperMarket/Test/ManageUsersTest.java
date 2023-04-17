@@ -39,7 +39,7 @@ public class ManageUsersTest extends Base {
 	     
 		
 	}
-	//@Test
+	@Test
 	public void manageUsersResetButtonBorderColor() throws IOException
 	{
 		  loginpage=new Verify_LoginPage(driver);

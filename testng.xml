@@ -7,7 +7,7 @@
 <listeners>
 <listener class-name="com.SevenRSuperMarket.Test.Listeners"/>
 </listeners>
-  <test thread-count="5" name="Test">
+ <test thread-count="5" name="Test">
 <parameter name="usernameInput" value="admin"/>
 <parameter name="PasswordInput" value="admin"/>
 <!-- <parameter name="usernameInput" value="admin"/>
@@ -16,10 +16,12 @@
 <parameter name="PasswordInput" value="admin"/>
 <parameter name="usernameInput" value="Admin"/>
 <parameter name="PasswordInput" value="adminnew"/>-->
-    <classes>
-	  
+ <classes>
+	  <class name="com.SevenRSuperMarket.Test.PushNotificationsTest"/>
+     
+      <!-- <class name="com.SevenRSuperMarket.Test.ManageProductsTest"/>
+      <class name="com.SevenRSuperMarket.Test.Verify_LoginTest"/>
       <class name="com.SevenRSuperMarket.Test.ManageUsersTest"/>
-     <!--  <class name="com.SevenRSuperMarket.Test.Verify_LoginTest"/>
 <class name="com.SevenRSuperMarket.Test.VerifyUsersTest"/>-->
     </classes>
   </test> <!-- Test -->

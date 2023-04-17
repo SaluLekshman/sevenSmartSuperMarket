@@ -8,13 +8,14 @@ import java.io.IOException;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.SevenRSuperMarket.Pages.HamburgerMenuPage;
 import com.SevenRSuperMarket.Pages.PushNotificationPage;
 import com.SevenRSuperMarket.Pages.Verify_LoginPage;
 
 import Utilities.ExcelUtility;
 
 public class PushNotificationsTest extends Base {
-	
+	HamburgerMenuPage hamburgermenupage;
 	PushNotificationPage pushnotificationpage;
 	Verify_LoginPage loginpage;
 	
@@ -23,6 +24,7 @@ public class PushNotificationsTest extends Base {
 	@Parameters({"usernameInput","PasswordInput"})
 	public void pushNotifications(String usernameInput,String PasswordInput) throws IOException 
 	{
+		String inputMainMenu=ExcelUtility.getString(0,3,System.getProperty("user.dir")+constants.Constants.TESTDATAFILE,"hamBurgerMenuData");
 		String expectedAlertMessage="×\r\n"
 				+ "Alert!\r\n"
 				+ "Message send successfully";
@@ -32,7 +34,9 @@ public class PushNotificationsTest extends Base {
 		loginpage.signInElement();
 		pushnotificationpage=new PushNotificationPage( driver);
 		pushnotificationpage.ClickOnpushNotificationelement();
-		driver.navigate().to("https://groceryapp.uniqassosiates.com/admin/list-notifications");
+		hamburgermenupage=new HamburgerMenuPage(driver);
+		hamburgermenupage.selectMenu(inputMainMenu);
+		//driver.navigate().to("https://groceryapp.uniqassosiates.com/admin/list-notifications");
 		pushnotificationpage.enterTitleElement();
 		pushnotificationpage.descriptionElement();
 		pushnotificationpage.sendElement();
